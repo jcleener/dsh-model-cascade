@@ -2,6 +2,16 @@
   "name": "dsh-model-cascade",
   "version": "0.1.0",
   "description": "Model selection as a three-level cascading menu (Provider -> Series -> Full model) for the composer model seat.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "client-plugin",
+    "model-selector",
+    "cascading-menu",
+    "ui",
+    "deepseek"
+  ],
   "author": "jcleener",
   "repository": {
     "type": "git",
