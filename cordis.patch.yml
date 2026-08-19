@@ -1,0 +1,11 @@
+# dsh-model-cascade — bundle patch layer.
+#
+# Mounting this package into the web profile composes the three-level
+# cascading model selector over the composer model seat
+# (`conversation.input.model`, single occupant at priority -1, shadowing the
+# shipped ui-model-selection seat). The row is a plain Cordis plugin whose
+# host half is empty; the browser half is loaded because the package declares
+# `dsh.client` (web).
+- insert:
+    - id: dsh-model-cascade
+      name: dsh-model-cascade
