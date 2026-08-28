@@ -1,6 +1,6 @@
 {
   "name": "dsh-model-cascade",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Model selection as a three-level cascading menu (Provider -> Series -> Full model) plus thinking-intensity (reasoning effort) selection for the composer model seat.",
   "keywords": [
     "dsh",
