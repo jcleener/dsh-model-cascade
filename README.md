@@ -123,3 +123,16 @@ dsh-model-cascade/
   想通过它暴露能力需要另行扩展 `lib/index.js`。
 - `modelDirectories` / `sessions.subagentAddress` / `remote.session` 等都是 DSH 0.1.5-rc.1
   服务层的内部契约；服务重命名或签名变化时，本插件会在注册阶段或首次 `directoryFor` 时失败。
+
+## 兼容性
+
+- **DSH 0.1.7-rc.1：可用**（2026-09-24 实测，需两处适配后才可用）。
+  1. **图标家族改名**：`dsh-client-ui-primitives` 把尺寸后缀图标整族删除
+     （`IconChevronDownOutline14`、`IconWarningOutline16`…），改为描边档
+     `…Artwork / …Regular / …Medium`。旧名字渲染时取到 `undefined` 会抛错，而 0.1.7 的槽位新增
+     **abdicate（除名）**机制会把崩溃条目移出投影 —— 表现为「注册成功但座位消失、退回官方两级菜单」。
+     已改名，并为原本 14px 的图标补 `size: 14`（`Regular` 档默认 16px）。
+  2. **菜单底色**：`--dsw-specific-menu` 在 0.1.7 由不透明改为半透明
+     （浅 `#f8f9fa94` / 深 `#30313680`，官方菜单配 `backdrop-filter` 做毛玻璃），本插件没配模糊
+     → 菜单透出背后内容。已改用不透明的 `--dsw-alias-bg-layer-3`。
+- **DSH 0.1.6-alpha.2：可用**。
